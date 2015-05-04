@@ -47,53 +47,6 @@
     <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
     <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUINDE5MDIzNTQPZBYCAgEPZBYCAgMPZBYCZg9kFgICCQ8WAh4Kb25rZXlwcmVzcwURaXNDYXBzbG9jayhldmVudClkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQhjbWRMb2dpbg==">
     </div>
-    
-    <script type="text/javascript">
-    //<![CDATA[
-    var theForm = document.forms['form1'];
-    if (!theForm) {
-        theForm = document.form1;
-    }
-    function __doPostBack(eventTarget, eventArgument) {
-        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-            theForm.__EVENTTARGET.value = eventTarget;
-            theForm.__EVENTARGUMENT.value = eventArgument;
-            theForm.submit();
-        }
-    }
-    //]]>
-    </script>
-    
-    
-    <script src="/WebResource.axd?d=oH9aBy_5uIg9EuNilLWS2Q2&amp;t=634238153149531250" type="text/javascript"></script>
-    
-    
-    <script src="/ScriptResource.axd?d=Gak-9-XcW7wP9XJFXXOWM7yVDpuQNCb-UycvJbE_5XG8nkabY1P5t3x-HqWpd2eS5TrrmksZR69leESckijd6Q2&amp;t=65b5b5ea" type="text/javascript"></script>
-    <script src="/ScriptResource.axd?d=ubkKxINRYAKlzoTcDWGeNbIb0SMLZKVBpaVHCNCZBlhiLv8CHloV-0ZQnpfIMENVsXxuOzKZuvahpFFsgYRq4JCgzezjFmwF4AdZhhjoYhk1&amp;t=fffffffffce324d3" type="text/javascript"></script>
-    <script type="text/javascript">
-    //<![CDATA[
-    if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-    //]]>
-    </script>
-    
-    <script src="/ScriptResource.axd?d=ubkKxINRYAKlzoTcDWGeNbIb0SMLZKVBpaVHCNCZBlhiLv8CHloV-0ZQnpfIMENVUn7gDkLuWIM1bX7DFjFvdzQCeaZxsqgWc5cK3ttinb9VR16vDOZTwBhyV_S2atcA0&amp;t=fffffffffce324d3" type="text/javascript"></script>
-    <script src="/WebResource.axd?d=OPMqe55Pc6CCiK8RJTQxGQ2&amp;t=634238153149531250" type="text/javascript"></script>
-    <script type="text/javascript">
-    //<![CDATA[
-    function WebForm_OnSubmit() {
-    if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
-    return true;
-    }
-    //]]>
-    </script>
-    
-        <script type="text/javascript">
-    //<![CDATA[
-    Sys.WebForms.PageRequestManager._initialize('ScriptManager1', document.getElementById('form1'));
-    Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tUpdatePanel1'], [], [], 90);
-    //]]>
-    </script>
-    
          <div id="UpdatePanel1">
     	
         <table width="702" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -155,70 +108,6 @@
             </td>       
       </tr>
     </tbody></table>
-           
-    </div>     
-        
-    <script type="text/javascript">
-    //<![CDATA[
-    var Page_Validators =  new Array(document.getElementById("vUserName"), document.getElementById("vUserPass"));
-    //]]>
-    </script>
-    
-    <script type="text/javascript">
-    //<![CDATA[
-    var vUserName = document.all ? document.all["vUserName"] : document.getElementById("vUserName");
-    vUserName.controltovalidate = "txtUserName";
-    vUserName.errormessage = "שדה חובה";
-    vUserName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-    vUserName.initialvalue = "";
-    var vUserPass = document.all ? document.all["vUserPass"] : document.getElementById("vUserPass");
-    vUserPass.controltovalidate = "txtUserPass";
-    vUserPass.errormessage = "שדה חובה";
-    vUserPass.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-    vUserPass.initialvalue = "";
-    //]]>
-    </script>
-    
-    
-    <script type="text/javascript">
-    //<![CDATA[
-    
-    var Page_ValidationActive = false;
-    if (typeof(ValidatorOnLoad) == "function") {
-        ValidatorOnLoad();
-    }
-    
-    function ValidatorOnSubmit() {
-        if (Page_ValidationActive) {
-            return ValidatorCommonOnSubmit();
-        }
-        else {
-            return true;
-        }
-    }
-            WebForm_AutoFocus('txtUserName');Sys.Application.initialize();
-    
-    document.getElementById('vUserName').dispose = function() {
-        Array.remove(Page_Validators, document.getElementById('vUserName'));
-    }
-    
-    document.getElementById('vUserPass').dispose = function() {
-        Array.remove(Page_Validators, document.getElementById('vUserPass'));
-    }
-    //]]>
-    </script>
-    </form>
-    <script type="text/javascript" language="javascript">
-    function isCapslock(e){
-    
-        kc = e.keyCode?e.keyCode:e.which;
-        sk = e.shiftKey?e.shiftKey:((kc == 16)?true:false);
-        if(((kc >= 65 && kc <= 90) && !sk)||((kc >= 97 && kc <= 122) && sk))
-            document.getElementById('lblMsg').innerHTML='מקש ה-CAPS LOCK לחוץ !';
-        else
-            document.getElementById('lblMsg').innerHTML='';
-    
-    }
-    </script>
+    </div>
   </body>
 </html>
